@@ -9,10 +9,10 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse extends ProgrammingClass {
 
     private String courseName;
-    String courseNumber;
+    private String courseNumber;
     private double credits;
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
@@ -24,6 +24,7 @@ public class IntroToProgrammingCourse {
         return courseNumber;
     }
 
+    @Override
     public final void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -37,6 +38,7 @@ public class IntroToProgrammingCourse {
         return credits;
     }
 
+    @Override
     public void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
